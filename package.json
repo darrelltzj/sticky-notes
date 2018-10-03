@@ -1,27 +1,26 @@
 {
-  "name": "sticky-note",
+  "name": "sticky-notes",
   "version": "1.0.0",
-  "description": "This page contains description and requirements for a Front-End assignment on Vanilla **Javascript**, **HTML5**, **CSS3**.",
+  "description": "A simple sticky note page using vanilla JS, HTML and CSS.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint '*.js'",
+    "fix": "eslint '*.js' --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheodoreGC/sticky-note.git"
+    "url": "git+https://github.com/darrelltzj/stickyNotes.git"
   },
-  "author": "",
+  "author": "Darrell TZJ",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TheodoreGC/sticky-note/issues"
+    "url": "https://github.com/darrelltzj/stickyNotes/issues"
   },
-  "homepage": "https://github.com/TheodoreGC/sticky-note#readme",
+  "homepage": "https://github.com/darrelltzj/stickyNotes#readme",
   "devDependencies": {
     "eslint": "^5.6.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0"
-  },
-  "dependencies": {
-    "eslint-config-airbnb": "^17.1.0"
   }
 }

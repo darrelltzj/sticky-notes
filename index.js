@@ -1,6 +1,4 @@
 /* global document */
-// import Note from './scripts/note.js';
-
 document.addEventListener('DOMContentLoaded', () => {
   const board = document.querySelector('#stick-note-board');
   const button = document.querySelector('#add-button');
@@ -8,14 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let notes = [];
 
+  const dltNote = (e) => {
+    const note = e.target.parentNode;
+    const i = note.id.split('note-')[1];
+    note.parentNode.removeChild(note);
+    notes = [
+      ...notes.slice(0, +i),
+      ...notes.slice(1 + +i),
+    ];
+  };
+
   const createNote = () => {
     const note = document.createElement('div');
     const noteDltBtn = document.createElement('div');
     const noteHeader = document.createElement('textarea');
     const noteContent = document.createElement('textarea');
+    const prevNoteI = notes.length > 0 ? notes[notes.length - 1].id.split('note-')[1] : 0;
 
     noteDltBtn.textContent = '✖';
-    noteHeader.value = `Note ${notes.length + 1}`;
+    noteDltBtn.addEventListener('click', dltNote);
+    noteHeader.value = `Note ${+prevNoteI + 1}`;
 
     note.appendChild(noteDltBtn);
     note.appendChild(noteHeader);
@@ -26,12 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     noteContent.classList.add('note-content');
     note.classList.add('note');
 
-    note.setAttribute('id', `note-${notes.length}`);
+    noteContent.setAttribute('rows', 10);
+    note.setAttribute('id', `note-${+prevNoteI + 1}`);
     board.appendChild(note);
     notes = [...notes, note];
-  };
-
-  const dltNote = (e) => {
   };
 
   const filterNotes = (e) => {
@@ -48,4 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('click', createNote);
   searchInput.addEventListener('input', filterNotes);
+
+  createNote();
 });
