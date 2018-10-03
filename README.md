@@ -1,0 +1,5 @@
+- Edit the title and content of the notes,
+- Add new notes,
+- Delete notes,
+- Save all his notes,
+- Filter notes on title thanks to a search bar
