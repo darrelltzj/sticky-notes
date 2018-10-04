@@ -13,7 +13,7 @@ header {
   -webkit-justify-content: space-between;
 }
 
-#search-input {
+#search_input {
   height: 30px;
   width: 80%;
   margin: 10px;
@@ -22,7 +22,7 @@ header {
   font-size: 28px;
 }
 
-#add-button {
+#add_button {
   align-self: center;
   height: 50px;
   margin: 10px;
@@ -35,11 +35,11 @@ header {
   transition-duration: 0.4s;
 }
 
-#add-button:hover {
+#add_button:hover {
   background-color: #4CAF50;
 }
 
-#stick-note-board {
+#board {
   width: 100vw;
   min-height: 100vh;
 	overflow-y: scroll;
@@ -74,26 +74,26 @@ header {
   -webkit-flex-direction: column;
 }
 
-.hidden {
-  display: none;
-}
-
-.note-dlt-btn {
+.note__dltbtn {
   color: red;
   align-self: flex-end;
   cursor: pointer;
 }
 
-.note-header {
+.note__header {
   border: none;
   background-color: #ffff88;
   max-width: 100%;
   font-size: 20px;
 }
 
-.note-content {
+.note__content {
   border: none;
   background-color: #ffff88;
   max-width: 100%;
   font-size: 16px;
+}
+
+.note--hidden {
+  display: none;
 }

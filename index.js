@@ -1,8 +1,8 @@
 /* global document */
 document.addEventListener('DOMContentLoaded', () => {
-  const board = document.querySelector('#stick-note-board');
-  const button = document.querySelector('#add-button');
-  const searchInput = document.querySelector('#search-input');
+  const board = document.querySelector('#board');
+  const button = document.querySelector('#add_button');
+  const searchInput = document.querySelector('#search_input');
 
   let notes = [];
 
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     note.appendChild(noteHeader);
     note.appendChild(noteContent);
 
-    noteDltBtn.classList.add('note-dlt-btn');
-    noteHeader.classList.add('note-header');
-    noteContent.classList.add('note-content');
+    noteDltBtn.classList.add('note__dltbtn');
+    noteHeader.classList.add('note__header');
+    noteContent.classList.add('note__content');
     note.classList.add('note');
 
     noteContent.setAttribute('rows', 10);
@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterNotes = (e) => {
     const searchTxt = e.target.value;
     notes.forEach((note) => {
-      const noteHeader = note.getElementsByClassName('note-header')[0];
+      const noteHeader = note.getElementsByClassName('note__header')[0];
       if (noteHeader && new RegExp(searchTxt, 'gi').test(noteHeader.value)) {
-        note.classList.remove('hidden');
+        note.classList.remove('note--hidden');
       } else {
-        note.classList.add('hidden');
+        note.classList.add('note--hidden');
       }
     });
   };
