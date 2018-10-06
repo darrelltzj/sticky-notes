@@ -1,9 +1,9 @@
-body {
-  background-color: #aaa;
+.body {
+  background-color: #aaaaaa;
   font-family: Comfortaa, cursive;
 }
 
-header {
+.header {
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -13,7 +13,7 @@ header {
   -webkit-justify-content: space-between;
 }
 
-#search_input {
+.input {
   height: 30px;
   width: 80%;
   margin: 10px;
@@ -22,24 +22,23 @@ header {
   font-size: 28px;
 }
 
-#add_button {
+.btn {
   align-self: center;
   height: 50px;
   margin: 10px;
   border-radius: 10px;
   font-size: 20px;
   background-color: #000000;
-  color: white;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  color: #ffffff;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
-#add_button:hover {
+.btn:hover {
   background-color: #4CAF50;
 }
 
-#board {
+.board {
   width: 100vw;
   min-height: 100vh;
 	overflow-y: scroll;
@@ -64,7 +63,6 @@ header {
   height: 200px;
   margin: 10px;
   padding: 10px;
-  background-color: #ffff88;
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -72,26 +70,27 @@ header {
   display: -webkit-flex;
   flex-direction: column;
   -webkit-flex-direction: column;
+  background-color: #ffff88;
 }
 
 .note__dltbtn {
-  color: red;
   align-self: flex-end;
   cursor: pointer;
+  color: red;
 }
 
 .note__header {
-  border: none;
-  background-color: #ffff88;
   max-width: 100%;
   font-size: 20px;
+  border: none;
+  background-color: #ffff88;
 }
 
 .note__content {
-  border: none;
-  background-color: #ffff88;
   max-width: 100%;
   font-size: 16px;
+  border: none;
+  background-color: #ffff88;
 }
 
 .note--hidden {
