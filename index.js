@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     noteContent.classList.add('note__content');
     note.classList.add('note');
 
-    noteContent.setAttribute('rows', 10);
+    noteContent.setAttribute('rows', 6);
     note.setAttribute('id', `note-${+prevNoteI + 1}`);
     board.appendChild(note);
     notes = [...notes, note];
